@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import NewMessageForm from './NewMessageForm'
 
 class App extends Component {
-  handleSend = (newMessage) => {}
+  state = { messages: [] }
+
+  handleSend = (newMessage) => {
+    this.setState(state => ({
+      messages: [newMessage, ...state.messages]
+    }));
+  }
 
   render() {
     return (
