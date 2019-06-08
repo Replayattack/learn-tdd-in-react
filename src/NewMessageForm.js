@@ -30,12 +30,12 @@ export default class NewMessageForm extends Component {
       <div>
         <input
           type="text"
-          data-testId="messageText"
+          data-testid="messageText"
           value={inputText}
           onChange={this.handleTextChange}
         />
         <button
-          data-testId="sendButton"
+          data-testid="sendButton"
           onClick={this.handleSend}
         >
           Send
