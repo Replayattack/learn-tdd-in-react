@@ -12,7 +12,7 @@ current:
       - node_modules
 
 e2e:
-  image: cypress/base:12
+  image: cypress/base:10
   stage: test
   variables:
     npm_config_cache: "$CI_PROJECT_DIR/.npm"
