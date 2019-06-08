@@ -19,6 +19,7 @@ e2e:
     CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
   script:
     - npm install
+    - npx cypress install
     - npx cypress run
   cache:
     paths:
