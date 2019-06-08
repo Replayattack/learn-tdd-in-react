@@ -1,0 +1,27 @@
+stages:
+  - test
+
+current:
+  image: node:current-alpine
+  stage: test
+  script:
+    - npm install
+    - npm run test
+  cache:
+    paths:
+      - node_modules
+
+e2e:
+  image: cypress/base:12
+  stage: test
+  variables:
+    npm_config_cache: "$CI_PROJECT_DIR/.npm"
+    CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+  script:
+    - npm install
+    - npx cypress run
+  cache:
+    paths:
+      - .npm
+      - cache/Cypress
+      - node_modules
