@@ -20,6 +20,7 @@ e2e:
   script:
     - npm install
     - npx cypress install
+    - npm run start &
     - npx cypress run
   cache:
     paths:
