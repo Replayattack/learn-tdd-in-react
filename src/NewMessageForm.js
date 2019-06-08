@@ -5,6 +5,7 @@ export default class NewMessageForm extends Component {
     return (
       <div>
         <input type="text" data-testId="messageText"/>
+        <button data-testId="sendButton" >Send</button>
       </div>
     )
   }
